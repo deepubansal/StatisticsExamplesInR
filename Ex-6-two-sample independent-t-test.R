@@ -14,6 +14,6 @@ rawData$avg <- sapply(X = rawData$avg, FUN = func1)
 ###############long way############
 sampleYes <- rawData[rawData$Inclination=='Yes',]
 sampleNo <- rawData[rawData$Inclination=='No',]
-t.test(sampleYes$avg, sampleNo$avg)
+t.test(sampleNo$avg, sampleYes$avg)
 ###############short way##########
 t.test(formula = avg~Inclination, data = rawData)
